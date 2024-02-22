@@ -29,7 +29,8 @@ def crawl_site(start_url, max_links=100):
             for link in links_on_page:
                 if len(crawled_links) >= max_links:
                     return crawled_links
-                if link not in visited_urls:
+                if link not in visited_urls and '#' not in link\
+                        and '.png' not in link and '.jpg' not in link and '.svg' not in link:
                     links_to_visit.append(link)
                     crawled_links.append(link)
 

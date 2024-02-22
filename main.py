@@ -39,6 +39,6 @@ def get_links_from_file(filename):
     return links
 
 
-output_directory = "files"
+output_directory = "files_new"
 os.makedirs(output_directory, exist_ok=True)
 download_and_save_files('crawled_links.txt', output_directory)
